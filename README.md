@@ -94,3 +94,4 @@ Write a code in C++ using the same array mentioned in #1 and implement a binary 
     return 0;
     }
 
+https://youtu.be/z6X7Mbjg0CA
