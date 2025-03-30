@@ -21,15 +21,15 @@ Write an algorithm that finds the greatest value within a binary search tree. (2
     };
     int findMaxValue(TreeNode* root) {
     if (!root) {
-        throw invalid_argument("Tree is empty!"); // Handle empty tree case
+        throw invalid_argument("Tree is empty!");
     }
     
     TreeNode* current = root;
     while (current->right) {
-        current = current->right; // Move right until the last node
+        current = current->right; 
     }
     
-    return current->value; // The rightmost node contains the max value 
+    return current->value; 
     }
     int main() {
     // Constructing a sample BST
@@ -39,8 +39,6 @@ Write an algorithm that finds the greatest value within a binary search tree. (2
     root->right->left = new TreeNode(7);
 
     cout << "Greatest value in BST: " << findMaxValue(root) << endl; // Output: 12
-
-    // Free allocated memory (not needed in smart pointer-based implementations)
     delete root->right->right;
     delete root->right->left;
     delete root->right;
