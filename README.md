@@ -58,21 +58,21 @@ Write a code in C++ using the same array mentioned in #1 and implement a binary 
     TreeNode(int val) : value(val), left(nullptr), right(nullptr) {}
     };
     TreeNode* insert(TreeNode* root, int val) {
-    if (!root) return new TreeNode(val); // Create a new node if tree is empty
+    if (!root) return new TreeNode(val); 
     
     if (val < root->value)
-        root->left = insert(root->left, val); // Insert into left subtree
+        root->left = insert(root->left, val); 
     else
-        root->right = insert(root->right, val); // Insert into right subtree
+        root->right = insert(root->right, val); 
 
     return root; // Return unchanged root node 
     }
     void inorderTraversal(TreeNode* root) {
     if (!root) return;
     
-    inorderTraversal(root->left);  // Visit left subtree
-    cout << root->value << " ";    // Print current node
-    inorderTraversal(root->right); // Visit right subtree
+    inorderTraversal(root->left); 
+    cout << root->value << " ";   
+    inorderTraversal(root->right);
     }
 
     int main() {
@@ -81,12 +81,12 @@ Write a code in C++ using the same array mentioned in #1 and implement a binary 
 
     TreeNode* root = nullptr; // Initialize BST root
 
-    // Insert elements into the BST
+ 
     for (int i = 0; i < n; i++) {
         root = insert(root, arr[i]);
     }
 
-    // Print the BST in sorted order (in-order traversal)
+    )
     cout << "In-order Traversal of BST: ";
     inorderTraversal(root);
     cout << endl;
